@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="开始跑起来"/>
+        android:text="开始跑起来" />
 
     <com.circleprogress.widget.CircleProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp" />
 
     <com.circleprogress.widget.NumberProgressBar
         android:id="@+id/progress_number"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp" />
+
+    <com.circleprogress.widget.PercentCircleView
+        android:id="@+id/circle_percent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp" />
 </LinearLayout>

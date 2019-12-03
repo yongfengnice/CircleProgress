@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.circleprogress.widget.CircleProgressBar;
 import com.circleprogress.widget.NumberProgressBar;
+import com.circleprogress.widget.PercentCircleView;
 
 public class MainActivity extends Activity {
 
@@ -16,6 +17,7 @@ public class MainActivity extends Activity {
     private Button mBtn;
     private CircleProgressBar mProgressBar;
     private NumberProgressBar mNumberProgressBar;
+    private PercentCircleView mPercentCircleView;
     private int mProgress;
     private Handler mHandler = new Handler() {
         @Override
@@ -26,6 +28,7 @@ public class MainActivity extends Activity {
                 if (mProgress <= 100) {
                     mProgressBar.setProgress(mProgress);
                     mNumberProgressBar.setProgress(mProgress);
+                    mPercentCircleView.setProgress(mProgress);
                     mHandler.sendEmptyMessageDelayed(MSG_CIRCLE, 100);
                 }
             }
@@ -43,6 +46,7 @@ public class MainActivity extends Activity {
     private void initView() {
         mProgressBar = (CircleProgressBar) findViewById(R.id.progress_bar);
         mNumberProgressBar = (NumberProgressBar) findViewById(R.id.progress_number);
+        mPercentCircleView = (PercentCircleView) findViewById(R.id.circle_percent);
         mBtn = (Button) findViewById(R.id.btn);
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
